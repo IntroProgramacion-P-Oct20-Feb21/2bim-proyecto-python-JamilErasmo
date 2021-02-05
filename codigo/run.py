@@ -88,30 +88,43 @@ if __name__ == "__main__":
     contador = 0 
     while(bandera):
         print("Ingresar una de las opciones")
-        opcion = int(input("Ingresar 1 para crear una cuenta en Facebook\nIngresar 2 para crear una cuenta en Twitter\n"
-        "Ingresar 3 para crear una cuenta en Whatsapp\nIngresar 4 para crear una cuenta en Telegram\n"
-        "Ingresar 5 para crear una cuenta en Signal\nIngresar 6 para crear una cuenta en Instagram\n"
+        opcion = int(input("Ingresar 1 para crear una cuenta en Facebook\nIngresar 2 para crear una cuenta en Twitter\n"\
+        "Ingresar 3 para crear una cuenta en Whatsapp\nIngresar 4 para crear una cuenta en Telegram\n"\
+        "Ingresar 5 para crear una cuenta en Signal\nIngresar 6 para crear una cuenta en Instagram\n"\
         "Ingresar 7 para crear una cuenta en Flickr:\n"))
         if opcion == 1 :
-            crearFacebook()
+            mensaje = crearFacebook()
+            print  (mensaje)
+            contador = contador + 1
         else:
             if opcion == 2 :
                 crearTwitter()
+                mensaje = crearTwitter()
+                print (mensaje)
+                contador = contador + 1
             else:
                 if opcion == 3 :
-                    crearWhatsapp()
+                    mensaje = crearWhatsapp()
+                    print (mensaje)
+                    contador = contador + 1
                 else:
                     if opcion == 4 :
                         crearTelegram()
+                        contador = contador + 1
                     else:
                         if opcion == 5 :
-                            crearsignal()
+                            mensaje = crearsignal()
+                            print (mensaje)
+                            contador = contador + 1
                         else:
                             if opcion == 6 :
                                 crearInstagram()
+                                contador = contador + 1
                             else:
                                 if opcion == 7 :
-                                    crearFlickr()
+                                    mensaje = crearFlickr()
+                                    print (mensaje)
+                                    contador = contador + 1
         contador = contador + 1
         verOfal = input("Ingrese si si quiere seguir en el ciclo o no si quiere salir del ciclo:\n ")
         if (verOfal == "no") | (verOfal == "No") :
